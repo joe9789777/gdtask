@@ -32,7 +32,7 @@ $data = [
 $data =  json_encode($data);
 
 $params = array(
-	'api_key'      => 'a75a63a9e0cf80869f719bc66bf1cc783e403d9ff51c968f51641db30d77c92b8a77a700',
+	'api_key'      => 'key-goes-here-the-gdtask-has-the-api-key',
 );
 
 $args = array(
