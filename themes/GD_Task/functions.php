@@ -16,21 +16,10 @@ function site_files(){
 
 add_action('wp_enqueue_scripts','site_files');
 
-//basic validation
+//basic sanitization
 $email = sanitize_email($_POST['email']);
 $name = sanitize_text_field($_POST['name']);
 
-if(empty($name) && empty($email)){
-    echo "<script> alert('all fields required')</script>";
-}
-
-if(empty($email)){
-    echo "<script> alert('email should not be empty')</script>";
-}
-
-if(empty($name)){
-    echo "<script> alert('name should not be empty')</script>";
-}
 
 $data = [
     'contact'=> [
