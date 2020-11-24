@@ -28,8 +28,9 @@
 ?>
 
 <div class="contact1">
-		
-		<input type="hidden" id="postID" name="custId" data-id="<?php echo $postID[0]; ?>">
+
+	<form action="functions.php" method="POST">
+	<input type="hidden" id="postID" name="custId" data-id="<?php echo $postID[0]; ?>">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
 				<img src="<?php echo get_template_directory_uri(); ?>/img-01.png" alt="IMG">
@@ -39,12 +40,12 @@
 				</span>
 
 				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Name" id="name">
+					<input class="input1" type="text" name="name" placeholder="Firstname" id="name" required>
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email" id="email">
+					<input class="input1" type="text" name="email" placeholder="Email" id="email" required>
 					<span class="shadow-input1"></span>
 				</div>
 
@@ -58,5 +59,7 @@
 				</div>
 		</div>
 	</div>
+	</form>	
+		
 
 <?php get_footer(); ?>

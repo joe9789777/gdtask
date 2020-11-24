@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Registering custom post type campaign
+ * 
+ */
 function gd_post_types(){
     register_post_type('campaign',[
         'show_in_rest' => true,
